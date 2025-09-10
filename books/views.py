@@ -1,3 +1,6 @@
-from django.shortcuts import render
+from django.http.response import HttpResponse , JsonResponse
 
-# Create your views here.
+def books_list(request):
+    books = ["book1" , "book2" , "book3"]
+    books_str = " ".join(books)
+    return HttpResponse(books_str)
